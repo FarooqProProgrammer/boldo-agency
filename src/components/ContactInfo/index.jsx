@@ -1,4 +1,6 @@
 import React from 'react'
+import { CiFacebook, CiSearch } from "react-icons/ci";
+import { FaGooglePlusSquare, FaTwitter } from "react-icons/fa";
 
 const ContactInfo = () => {
     const officeHours = [
@@ -12,11 +14,16 @@ const ContactInfo = () => {
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     {/* Map Image */}
-                    <div className="relative h-[400px] rounded-2xl overflow-hidden">
-                        <img 
-                            src="https://images.unsplash.com/photo-1553290322-0440b3457d0c?w=800&auto=format&fit=crop&q=60" 
-                            alt="Office Location"
-                            className="w-full h-full object-cover"
+                    <div className="relative w-full h-0 pb-[56.25%] overflow-hidden rounded-2xl">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7239.24508120027!2d67.16313809999998!3d24.876738200000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1737967453733!5m2!1sen!2s"
+                            width="600"
+                            height="450"
+                            style={{ border: 0 }}
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            className="absolute inset-0 w-full h-full"
                         />
                         <div className="absolute inset-0 bg-black/20"></div>
                     </div>
@@ -26,7 +33,7 @@ const ContactInfo = () => {
                         <h2 className="text-3xl md:text-4xl font-semibold mb-8">
                             Visit Our Office
                         </h2>
-                        
+
                         {/* Address */}
                         <div className="mb-8">
                             <h3 className="text-xl font-semibold mb-4 text-[#65E4A3]">Address</h3>
@@ -62,18 +69,16 @@ const ContactInfo = () => {
 
                         {/* Social Links */}
                         <div className="mt-8 flex space-x-4">
-                            {['facebook', 'twitter', 'linkedin', 'instagram'].map((social) => (
-                                <a
-                                    key={social}
-                                    href={`#${social}`}
-                                    className="w-10 h-10 rounded-full bg-[#65E4A3] flex items-center justify-center text-[#0A2640] hover:bg-white transition-colors duration-200"
-                                >
-                                    <span className="sr-only">{social}</span>
-                                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/>
-                                    </svg>
-                                </a>
-                            ))}
+                            <div className='w-[40px] h-[40px] bg-white rounded-full flex justify-center items-center'>
+                                <CiFacebook color='#0A2640' size={24} />
+                            </div>
+                            <div className='w-[40px] h-[40px] bg-white rounded-full flex justify-center items-center'>
+                                <FaGooglePlusSquare color='#0A2640' size={24} />
+                            </div>
+                            <div className='w-[40px] h-[40px] bg-white rounded-full flex justify-center items-center'>
+                                <FaTwitter color='#0A2640' size={24} />
+                            </div>
+
                         </div>
                     </div>
                 </div>

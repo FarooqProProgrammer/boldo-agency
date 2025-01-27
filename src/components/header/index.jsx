@@ -17,7 +17,7 @@ const Header = () => {
                 <div className='flex justify-between items-center'>
                     {/* Logo */}
                     <Link href="/" className='flex-shrink-0'>
-                        <img src="/logo.png" alt="Boldo Logo" className='h-8 md:h-10' />
+                        <img src="/images/logo.png" alt="Boldo Logo" className='h-8 md:h-10' />
                     </Link>
 
                     {/* Desktop Menu */}

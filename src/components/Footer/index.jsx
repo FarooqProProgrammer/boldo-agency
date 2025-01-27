@@ -27,7 +27,7 @@ const Footer = () => {
                     {/* Brand Column */}
                     <div className="space-y-6">
                         <Link href="/" className="block">
-                            <img src="/logo.png" alt="Boldo Logo" className="h-8" />
+                            <img src="/images/logo.png" alt="Boldo Logo" className="h-8" />
                         </Link>
                         <p className="text-white/70">
                             Social media validation business model canvas graphical user interface launch party creative facebook iPad twitter.
